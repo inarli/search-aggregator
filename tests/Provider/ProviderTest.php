@@ -34,8 +34,8 @@ class ProviderTest extends BaseTest
         $this->assertTrue($this->provider->isEnabled() == $this->providerParams['enabled']);
         $this->assertTrue($this->provider->getSearchPath() == $this->providerParams['searchPath']);
         $this->assertTrue($this->provider->getHost() == $this->providerParams['host']);
-        $this->arrayHasKey('row_selector', $this->provider->getSelectors());
-        $this->arrayHasKey('title_selector', $this->provider->getSelectors());
-        $this->arrayHasKey('link_selector', $this->provider->getSelectors());
+        $this->assertArrayHasKey('row_selector', $this->provider->getSelectors());
+        $this->assertArrayHasKey('title_selector', $this->provider->getSelectors());
+        $this->assertArrayHasKey('link_selector', $this->provider->getSelectors());
     }
 }
