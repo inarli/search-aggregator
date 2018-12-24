@@ -33,9 +33,11 @@ docker-compose  exec app php bin/console test-tool "pointer brand protection"
 ```
 
 #### How to add a new provider:
-If you want add a new provider. You should define provider data to /config/providers.yaml like below:
+If you want add a new provider. inject your own providers.yaml file like below:
 
 ```yaml
+...
+...
 new_search_engine:
   enabled: true # you can enable or disable search engine
   host: https://www.new-search-engine.com # host name
@@ -44,8 +46,10 @@ new_search_engine:
     row_selector: 'li.b_algo' # search item selector
     title_selector: 'h2 > a' # item title selector
     link_selector: 'h2 > a' # item lin selector
+...
+...
 ```
-Or you can inject your own providers.yaml file. 
+
 ```php
 $providerRepository = new ProviderRepository('YOUR_CONFIG_FILE PATH');
 $search->setProviderRepository($providerRepository);
