@@ -1,0 +1,46 @@
+google:
+  enabled: true
+  host: http://www.google.com
+  searchPath: /search?&q=%s
+  selectors:
+    row_selector: 'div.g'
+    title_selector: 'a'
+    link_selector: 'a'
+  listener: SearchAggregator\Event\Listener\Google
+
+yahoo:
+  enabled: false
+  host: https://search.yahoo.com
+  searchPath: /search?p=%s
+  selectors:
+    row_selector: 'h3'
+    title_selector: 'h3.title'
+    link_selector: 'h3.title > a'
+
+yandex:
+  enabled: false
+  host: https://yandex.com
+  searchPath: /search/?text=%s
+  selectors:
+    row_selector: 'div.organic'
+    title_selector: 'h2.organic__title-wrapper'
+    link_selector: 'a.link'
+
+bing:
+  enabled: false
+  host: https://www.bing.com
+  searchPath: /search?q=%s
+  selectors:
+    row_selector: 'li.b_algo'
+    title_selector: 'h2 > a'
+    link_selector: 'h2 > a'
+
+
+aol:
+  enabled: true
+  host: https://search.aol.com
+  searchPath: /aol/search?q=%s
+  selectors:
+    row_selector: '.algo-sr'
+    title_selector: '.title'
+    link_selector: '.title > a'

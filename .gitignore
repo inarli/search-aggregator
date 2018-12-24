@@ -1,0 +1,10 @@
+.DS_Store
+*.swp
+.idea/*
+/.web-server-pid
+/vendor/
+.idea/
+composer.lock
+*._.DS_Store
+.php_cs.cache
+reports

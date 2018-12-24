@@ -1,0 +1,36 @@
+google:
+  enabled: true
+  host: http://www.google.com
+  searchPath: /search?&q=%s
+  selectors:
+    row_selector: 'div.g'
+    title_selector: 'a'
+    link_selector: 'a'
+  listener: SearchAggregator\Event\Listener\Google
+
+yahoo:
+  enabled: true
+  host: https://search.yahoo.com
+  searchPath: /search?p=%s
+  selectors:
+    row_selector: 'h3'
+    title_selector: 'h3.title'
+    link_selector: 'h3.title > a'
+
+yandex:
+  enabled: true
+  host: https://yandex.com
+  searchPath: /search/?text=%s
+  selectors:
+    row_selector: 'div.organic'
+    title_selector: 'h2.organic__title-wrapper'
+    link_selector: 'a.link'
+
+bing:
+  enabled: true
+  host: https://www.bing.com
+  searchPath: /search?q=%s
+  selectors:
+    row_selector: 'li.b_algo'
+    title_selector: 'h2 > a'
+    link_selector: 'h2 > a'

@@ -1,0 +1,27 @@
+SearchAggregator\Provider\Provider:
+  properties:
+    enabled:
+      - NotNull: ~
+      - Type: bool
+
+    host:
+      - NotNull: ~
+      - Url: ~
+
+    searchPath:
+      - NotNull: ~
+
+    selectors:
+      - Collection:
+          fields:
+            row_selector:
+              - NotBlank: ~
+              - NotNull: ~
+            title_selector:
+              - NotBlank: ~
+              - NotNull: ~
+            link_selector:
+              - NotBlank: ~
+              - NotNull: ~
+    listener:
+      - Type: object

@@ -1,0 +1,34 @@
+{
+  "name": "mustafaileri/search-aggregator",
+  "description": "This is a test case implementation for Pointer Brand Protection.",
+  "type": "project",
+  "require": {
+    "guzzlehttp/guzzle": "6.3.3",
+    "symfony/dom-crawler": "^4.2",
+    "symfony/css-selector": "^4.2",
+    "symfony/yaml": "^4.2",
+    "symfony/validator": "^4.2",
+    "doctrine/annotations": "^1.6",
+    "symfony/console": "^4.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "7.5.1"
+  },
+  "authors": [
+    {
+      "name": "Mustafa Ileri",
+      "email": "mi@mustafaileri.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "SearchAggregator\\": "src/",
+      "SearchAggregator\\Console\\": "bin/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SearchAggregator\\Tests\\": "tests/"
+    }
+  }
+}
