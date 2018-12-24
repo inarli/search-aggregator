@@ -71,7 +71,7 @@ It means you can modify a searchResultItem, after when it created. For example G
 **searchResultCallback**:
 It means you can modify all search result data if you want, before the presentation.
 
-If you want define a listener; you should create a class extendted "AbstractProviderListener" abstract class. 
+If you want define a listener; you should create a class extended "AbstractProviderListener" abstract class. 
 
 ```php
 class AOL extends AbstractProviderListener
