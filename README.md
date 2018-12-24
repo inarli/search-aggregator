@@ -53,7 +53,7 @@ $search->setProviderRepository($providerRepository);
 **Example**
 There is a sample overriden config file. New provider added (AOL) and other providers disabled via overriden config file. You can run overrided config via test-tool:
 ```bash
-docker-compose  exec app php bin/console test-tool "pointerbrandprotection" /app/config/providers_extended.yaml
+docker-compose  exec app php bin/console test-tool "pointer brand protection" /app/config/providers_extended.yaml
 ```
 
 #### Allowed modification via Listener:
@@ -84,3 +84,4 @@ aol:
     ...
     ...
     listener: [YOUR\NAME\SPACE\AOL]
+```
