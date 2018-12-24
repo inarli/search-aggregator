@@ -33,9 +33,11 @@ docker-compose  exec app php bin/console test-tool "pointer brand protection"
 ```
 
 #### How to add a new provider:
-If you want add a new provider. You should define provider data to /config/providers.yaml like below:
+If you want add a new provider. inject your own providers.yaml file like below:
 
 ```yaml
+...
+...
 new_search_engine:
   enabled: true # you can enable or disable search engine
   host: https://www.new-search-engine.com # host name
@@ -44,8 +46,10 @@ new_search_engine:
     row_selector: 'li.b_algo' # search item selector
     title_selector: 'h2 > a' # item title selector
     link_selector: 'h2 > a' # item lin selector
+...
+...
 ```
-Or you can inject your own providers.yaml file. 
+
 ```php
 $providerRepository = new ProviderRepository('YOUR_CONFIG_FILE PATH');
 $search->setProviderRepository($providerRepository);
@@ -53,7 +57,7 @@ $search->setProviderRepository($providerRepository);
 **Example**
 There is a sample overriden config file. New provider added (AOL) and other providers disabled via overriden config file. You can run overrided config via test-tool:
 ```bash
-docker-compose  exec app php bin/console test-tool "pointerbrandprotection" /app/config/providers_extended.yaml
+docker-compose  exec app php bin/console test-tool "pointer brand protection" /app/config/providers_extended.yaml
 ```
 
 #### Allowed modification via Listener:
@@ -71,7 +75,7 @@ It means you can modify a searchResultItem, after when it created. For example G
 **searchResultCallback**:
 It means you can modify all search result data if you want, before the presentation.
 
-If you want define a listener; you should create a class extendted "AbstractProviderListener" abstract class. 
+If you want define a listener; you should create a class extended "AbstractProviderListener" abstract class. 
 
 ```php
 class AOL extends AbstractProviderListener
@@ -84,3 +88,4 @@ aol:
     ...
     ...
     listener: [YOUR\NAME\SPACE\AOL]
+```
