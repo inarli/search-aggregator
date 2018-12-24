@@ -62,7 +62,7 @@ There is an event listener mechanism. It allows to you modify or intervene befor
 **beforeRequest**: 
 If you want to modify a request or do anything before sending, you can use this event. For example, you can add a proxy for some providers.
 
-**afterResponse**
+**afterResponse**:
 If you want to modify a response or do anything after a response, you can use this event. For example, you can log responses for providers.
 
 **searchResultItemCallback**:
@@ -71,10 +71,10 @@ It means you can modify a searchResultItem, after when it created. For example G
 **searchResultCallback**:
 It means you can modify all search result data if you want, before the presentation.
 
-If you want define a listener; you should create a class implements "ProviderListenerInterface" interface. 
+If you want define a listener; you should create a class extendted "AbstractProviderListener" abstract class. 
 
 ```php
-class AOL implements ProviderListenerInterface
+class AOL extends AbstractProviderListener
 ```
 
 Then you should define it in your config.
