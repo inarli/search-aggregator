@@ -8,3 +8,7 @@ composer.lock
 *._.DS_Store
 .php_cs.cache
 reports
+.scannerwork/
+sonar-scanner-3.2.0.1227-macosx/
+tests-clover.xml
+tests-junit.xml

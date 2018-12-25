@@ -20,16 +20,15 @@ class Parser
      *
      * @param ResponseInterface $res
      * @param Provider $provider
-     * @param string $key
      * @return array
      */
-    public function parseResults(ResponseInterface $res, Provider $provider, string $key): array
+    public function parseResults(ResponseInterface $res, Provider $provider): array
     {
         $searchResults = [];
         $htmlOutput = $res->getBody()->getContents();
         $crawler = new Crawler($htmlOutput, $provider->getHost());
         $crawler->filter($provider->getSelectors()['row_selector'])->each(
-            function (Crawler $node) use ($provider, &$searchResults, $key) {
+            function (Crawler $node) use ($provider, &$searchResults) {
                 try {
                     //Title and link selection for each row.
                     $selectors = $provider->getSelectors();

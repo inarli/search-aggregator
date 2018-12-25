@@ -143,7 +143,7 @@ final class Search
         foreach ($providers as $providerKey => $provider) {
             $response = $this->requester->getResult($provider, $keyword);
             if ($response instanceof ResponseInterface) {
-                $resultsByProviders[$providerKey] = $this->parser->parseResults($response, $provider, $providerKey);
+                $resultsByProviders[$providerKey] = $this->parser->parseResults($response, $provider);
             }
         }
         return $resultsByProviders;

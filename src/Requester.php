@@ -49,9 +49,7 @@ class Requester
         $request = new Request('GET', $url);
         /** @var Request $request */
         $request = Dispatcher::dispatchEvent($provider, Event::BEFORE_REQUEST_EVENT, $request);
-        $response = $this->client->send($request);
-        //@todo implement after response method
-        return $response;
+        return $this->client->send($request);
     }
 
     /**

@@ -21,8 +21,7 @@ class Util
         if (array_key_exists('query', $parserUrl)) {
             parse_str($parserUrl['query'], $data);
             if (array_key_exists('q', $data)) {
-                $clean_url = $data['q'];
-                return $clean_url;
+                return  $data['q'];
             }
         }
         return $url;
