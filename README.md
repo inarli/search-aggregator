@@ -97,3 +97,8 @@ aol:
     ...
     listener: [YOUR\NAME\SPACE\AOL]
 ```
+
+### Quality Metrics:
+You can check quality of library from sonarcloud:
+
+https://sonarcloud.io/dashboard?id=mustafaileri_search-aggregator
