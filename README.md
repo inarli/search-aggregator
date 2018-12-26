@@ -31,6 +31,14 @@ Get search results via console
 ```bash
 docker-compose  exec app php bin/console test-tool "pointer brand protection"
 ```
+### Test Coverage Screen Output:
+[![N|Test Results](https://raw.githubusercontent.com/mustafaileri/search-aggregator/master/sample_outputs/test-results.png)](https://raw.githubusercontent.com/mustafaileri/search-aggregator/master/sample_outputs/test-results.png)
+
+### Sample Result Screen Output:
+[![N|Test Results](https://raw.githubusercontent.com/mustafaileri/search-aggregator/master/sample_outputs/sample-result.png)](https://raw.githubusercontent.com/mustafaileri/search-aggregator/master/sample_outputs/sample-result.png)
+
+### Sample Overriden Result Screen Output (Added AOL and disabled other provider excluded Google):
+[![N|Test Results](https://raw.githubusercontent.com/mustafaileri/search-aggregator/master/sample_outputs/sample-extended-result.png)](https://raw.githubusercontent.com/mustafaileri/search-aggregator/master/sample_outputs/sample-extended-result.png)
 
 #### How to add a new provider:
 If you want add a new provider. inject your own providers.yaml file like below:
@@ -89,3 +97,8 @@ aol:
     ...
     listener: [YOUR\NAME\SPACE\AOL]
 ```
+
+### Quality Metrics:
+You can check quality of library from sonarcloud:
+
+https://sonarcloud.io/dashboard?id=mustafaileri_search-aggregator
