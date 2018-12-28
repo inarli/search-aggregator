@@ -41,7 +41,7 @@ docker-compose  exec app php bin/console test-tool "pointer brand protection"
 [![N|Test Results](https://raw.githubusercontent.com/mustafaileri/search-aggregator/master/sample_outputs/sample-extended-result.png)](https://raw.githubusercontent.com/mustafaileri/search-aggregator/master/sample_outputs/sample-extended-result.png)
 
 ### How to use it?
-You can use it after dwonload it via composer.
+You can use it after download it via composer.
 
 ```php
 $searcher = new Searcher();
