@@ -8,18 +8,18 @@ use SearchAggregator\Aggregator;
 use SearchAggregator\Parser;
 use SearchAggregator\Provider\ProviderRepository;
 use SearchAggregator\Requester;
-use SearchAggregator\Search;
+use SearchAggregator\Searcher;
 
-class SearchTest extends BaseTest
+class SearcherTest extends BaseTest
 {
     /**
-     * @var Search
+     * @var Searcher
      */
     private $search;
 
     public function setUp()
     {
-        $this->search = new Search();
+        $this->search = new Searcher();
     }
 
     public function testSetterAndGetters()

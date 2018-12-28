@@ -11,7 +11,7 @@ use SearchAggregator\Provider\ProviderRepository;
  * Class Search
  * @package SearchAggregator
  */
-final class Search
+final class Searcher
 {
     /**
      * @var Requester

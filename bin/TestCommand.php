@@ -5,7 +5,7 @@ namespace SearchAggregator\Console;
 
 use SearchAggregator\Helper\Util;
 use SearchAggregator\Provider\ProviderRepository;
-use SearchAggregator\Search;
+use SearchAggregator\Searcher;
 use SearchAggregator\SearchResultItem;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\Table;
@@ -44,7 +44,7 @@ class TestCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $configFile = $input->getArgument('config');
-        $search = new Search();
+        $search = new Searcher();
         if ($configFile) {
             $providerRepository = new ProviderRepository($configFile);
             $search->setProviderRepository($providerRepository);
