@@ -40,6 +40,15 @@ docker-compose  exec app php bin/console test-tool "pointer brand protection"
 ### Sample Overriden Result Screen Output (Added AOL and disabled other provider excluded Google):
 [![N|Test Results](https://raw.githubusercontent.com/mustafaileri/search-aggregator/master/sample_outputs/sample-extended-result.png)](https://raw.githubusercontent.com/mustafaileri/search-aggregator/master/sample_outputs/sample-extended-result.png)
 
+### How to use it?
+You can use it after dwonload it via composer.
+
+```php
+$searcher = new Searcher();
+$searcher->search('keyword');
+```
+
+
 #### How to add a new provider:
 If you want add a new provider. inject your own providers.yaml file like below:
 
